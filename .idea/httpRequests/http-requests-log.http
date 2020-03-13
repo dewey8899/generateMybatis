@@ -1,0 +1,179 @@
+POST http://test.oms.ez4s.com/ezplatform/report/replenishment_amount_query/search
+Accept: application/json, text/javascript, */*; q=0.01
+Cache-Control: no-cache
+Cookie: JSESSIONID=EDA3E50D9B38652EF8D5D0E5F6D380ED; Hm_lvt_45341b7d81efc02f807313ce31fcb7ad=1563845361,1564622386,1565157726,1565313865
+Content-Type: application/json
+
+{"length":10,   "sourceType":"补货订单",   "start":"0",   "draw": 2 }
+
+<> 2020-03-13T034905.200.json
+
+###
+
+POST http://localhost:8080/ezplatform/report/replenishment_amount_query/search
+Accept: application/json, text/javascript, */*; q=0.01
+Cache-Control: no-cache
+Cookie: JSESSIONID=83058AE0E34EB97EFF93D8E2646084F0; to7.tec.groupid=0; to7.user.userid=1; to7.user.station.shortname=enmore_13; to7.workbench.type=3; to7.platform.tec.openid.appid=123; to7.tec.openid.appid=wxdd4b84db668674d0; to7.user.openid=123; to7.user.openid.appid=123; to7.tec.openid=obbtkwYwPTexABeeP7exx5_0uISw; to7.platform.tec.openid=obbtkwYwPTexABeeP7exx5_0uISw; to7.stationid=106; to7.tec.station.shortname=enmore_106; to7.tec.brandbussnessid=1; to7.tec.station.alone=1; to7.workbench.processid=1322; to7.workbench.pname=%E5%BE%85%E4%BF%AE%E8%BD%A6%E8%BE%86; Hm_lvt_45341b7d81efc02f807313ce31fcb7ad=1564122411,1564363868,1564967870,1565228636; to7.tec.redirect.url=http%3A%2F%2Flocalhost%3A1111%2Fweixin%2Ftec%2Fworkbench%3F; to7.tec.tecname=%E9%98%BF_136; to7.workbench.filter=%7B%7D; Idea-51610632=b432fea7-e92a-4a99-b27d-8122d7075cbf; to7.platform.tec.redirect.url=http%3A%2F%2Flocalhost%3A1111%2Fweixin%2Fplatform%2Ftec%2FtecInfoPage%3F; to7.tec.tecid=799; to7.tec.franchiserid=0; to7.platform.tec.tecid=799; Hm_lvt_5d1f19f2997681fb6829fd3a540f541a=1583132361
+Content-Type: application/json
+
+{"length":10,   "sourceType":"补货订单",   "start":"0",   "draw": 2 }
+
+<> 2020-03-13T034250.200.json
+
+###
+
+POST http://localhost:8080/ezplatform/report/replenishment_amount_query/search
+Accept: application/json, text/javascript, */*; q=0.01
+Cache-Control: no-cache
+Cookie: JSESSIONID=83058AE0E34EB97EFF93D8E2646084F0; to7.tec.groupid=0; to7.user.userid=1; to7.user.station.shortname=enmore_13; to7.workbench.type=3; to7.platform.tec.openid.appid=123; to7.tec.openid.appid=wxdd4b84db668674d0; to7.user.openid=123; to7.user.openid.appid=123; to7.tec.openid=obbtkwYwPTexABeeP7exx5_0uISw; to7.platform.tec.openid=obbtkwYwPTexABeeP7exx5_0uISw; to7.stationid=106; to7.tec.station.shortname=enmore_106; to7.tec.brandbussnessid=1; to7.tec.station.alone=1; to7.workbench.processid=1322; to7.workbench.pname=%E5%BE%85%E4%BF%AE%E8%BD%A6%E8%BE%86; Hm_lvt_45341b7d81efc02f807313ce31fcb7ad=1564122411,1564363868,1564967870,1565228636; to7.tec.redirect.url=http%3A%2F%2Flocalhost%3A1111%2Fweixin%2Ftec%2Fworkbench%3F; to7.tec.tecname=%E9%98%BF_136; to7.workbench.filter=%7B%7D; Idea-51610632=b432fea7-e92a-4a99-b27d-8122d7075cbf; to7.platform.tec.redirect.url=http%3A%2F%2Flocalhost%3A1111%2Fweixin%2Fplatform%2Ftec%2FtecInfoPage%3F; to7.tec.tecid=799; to7.tec.franchiserid=0; to7.platform.tec.tecid=799; Hm_lvt_5d1f19f2997681fb6829fd3a540f541a=1583132361
+Content-Type: application/json
+
+{"length":10,"sourceType":"补货订单","start":"0"}
+
+<> 2020-03-13T034225.200.json
+
+###
+
+POST http://localhost:8080/ezplatform/report/replenishment_amount_query/search
+Accept: application/json, text/javascript, */*; q=0.01
+Cache-Control: no-cache
+Cookie: JSESSIONID=83058AE0E34EB97EFF93D8E2646084F0; to7.tec.groupid=0; to7.user.userid=1; to7.user.station.shortname=enmore_13; to7.workbench.type=3; to7.platform.tec.openid.appid=123; to7.tec.openid.appid=wxdd4b84db668674d0; to7.user.openid=123; to7.user.openid.appid=123; to7.tec.openid=obbtkwYwPTexABeeP7exx5_0uISw; to7.platform.tec.openid=obbtkwYwPTexABeeP7exx5_0uISw; to7.stationid=106; to7.tec.station.shortname=enmore_106; to7.tec.brandbussnessid=1; to7.tec.station.alone=1; to7.workbench.processid=1322; to7.workbench.pname=%E5%BE%85%E4%BF%AE%E8%BD%A6%E8%BE%86; Hm_lvt_45341b7d81efc02f807313ce31fcb7ad=1564122411,1564363868,1564967870,1565228636; to7.tec.redirect.url=http%3A%2F%2Flocalhost%3A1111%2Fweixin%2Ftec%2Fworkbench%3F; to7.tec.tecname=%E9%98%BF_136; to7.workbench.filter=%7B%7D; Idea-51610632=b432fea7-e92a-4a99-b27d-8122d7075cbf; to7.platform.tec.redirect.url=http%3A%2F%2Flocalhost%3A1111%2Fweixin%2Fplatform%2Ftec%2FtecInfoPage%3F; to7.tec.tecid=799; to7.tec.franchiserid=0; to7.platform.tec.tecid=799; Hm_lvt_5d1f19f2997681fb6829fd3a540f541a=1583132361
+Content-Type: application/json
+
+{"length":10,"sourceType":"补货订单","start":"0"}
+
+<> 2020-03-13T034037.200.json
+
+###
+
+POST http://localhost:8080/ezplatform/report/replenishment_amount_query/search
+Accept: application/json, text/javascript, */*; q=0.01
+Cache-Control: no-cache
+Cookie: JSESSIONID=83058AE0E34EB97EFF93D8E2646084F0; to7.tec.groupid=0; to7.user.userid=1; to7.user.station.shortname=enmore_13; to7.workbench.type=3; to7.platform.tec.openid.appid=123; to7.tec.openid.appid=wxdd4b84db668674d0; to7.user.openid=123; to7.user.openid.appid=123; to7.tec.openid=obbtkwYwPTexABeeP7exx5_0uISw; to7.platform.tec.openid=obbtkwYwPTexABeeP7exx5_0uISw; to7.stationid=106; to7.tec.station.shortname=enmore_106; to7.tec.brandbussnessid=1; to7.tec.station.alone=1; to7.workbench.processid=1322; to7.workbench.pname=%E5%BE%85%E4%BF%AE%E8%BD%A6%E8%BE%86; Hm_lvt_45341b7d81efc02f807313ce31fcb7ad=1564122411,1564363868,1564967870,1565228636; to7.tec.redirect.url=http%3A%2F%2Flocalhost%3A1111%2Fweixin%2Ftec%2Fworkbench%3F; to7.tec.tecname=%E9%98%BF_136; to7.workbench.filter=%7B%7D; Idea-51610632=b432fea7-e92a-4a99-b27d-8122d7075cbf; to7.platform.tec.redirect.url=http%3A%2F%2Flocalhost%3A1111%2Fweixin%2Fplatform%2Ftec%2FtecInfoPage%3F; to7.tec.tecid=799; to7.tec.franchiserid=0; to7.platform.tec.tecid=799; Hm_lvt_5d1f19f2997681fb6829fd3a540f541a=1583132361
+Content-Type: application/json
+
+{"length":10,"sourceType":"补货订单","start":"0"}
+
+<> 2020-03-13T034026.200.json
+
+###
+
+POST http://localhost:8080/ezplatform/report/replenishment_amount_query/search
+Accept: application/json, text/javascript, */*; q=0.01
+Cache-Control: no-cache
+Cookie: JSESSIONID=83058AE0E34EB97EFF93D8E2646084F0; to7.tec.groupid=0; to7.user.userid=1; to7.user.station.shortname=enmore_13; to7.workbench.type=3; to7.platform.tec.openid.appid=123; to7.tec.openid.appid=wxdd4b84db668674d0; to7.user.openid=123; to7.user.openid.appid=123; to7.tec.openid=obbtkwYwPTexABeeP7exx5_0uISw; to7.platform.tec.openid=obbtkwYwPTexABeeP7exx5_0uISw; to7.stationid=106; to7.tec.station.shortname=enmore_106; to7.tec.brandbussnessid=1; to7.tec.station.alone=1; to7.workbench.processid=1322; to7.workbench.pname=%E5%BE%85%E4%BF%AE%E8%BD%A6%E8%BE%86; Hm_lvt_45341b7d81efc02f807313ce31fcb7ad=1564122411,1564363868,1564967870,1565228636; to7.tec.redirect.url=http%3A%2F%2Flocalhost%3A1111%2Fweixin%2Ftec%2Fworkbench%3F; to7.tec.tecname=%E9%98%BF_136; to7.workbench.filter=%7B%7D; Idea-51610632=b432fea7-e92a-4a99-b27d-8122d7075cbf; to7.platform.tec.redirect.url=http%3A%2F%2Flocalhost%3A1111%2Fweixin%2Fplatform%2Ftec%2FtecInfoPage%3F; to7.tec.tecid=799; to7.tec.franchiserid=0; to7.platform.tec.tecid=799; Hm_lvt_5d1f19f2997681fb6829fd3a540f541a=1583132361
+Content-Type: application/json
+
+accountType:"" createdTimeEnd:"" createdTimeStart:"" entityCompanyFullName:"" entityInternalCode:"" length:10 order:[] sourceCode:"" sourceType:"补货订单" start:0
+
+<> 2020-03-13T033651.200.json
+
+###
+
+POST http://localhost:8080/ezplatform/report/replenishment_amount_query/search
+Accept: application/json, text/javascript, */*; q=0.01
+Cache-Control: no-cache
+Cookie: JSESSIONID=EDA3E50D9B38652EF8D5D0E5F6D380ED; Hm_lvt_45341b7d81efc02f807313ce31fcb7ad=1563845361,1564622386,1565157726,1565313865
+Content-Type: application/json
+
+accountType:"" createdTimeEnd:"" createdTimeStart:"" entityCompanyFullName:"" entityInternalCode:"" length:10 order:[] sourceCode:"" sourceType:"补货订单" start:0
+
+<> 2020-03-13T033620.200.json
+
+###
+
+POST http://test.oms.ez4s.com/ezplatform/report/replenishment_amount_query/search
+Accept: application/json, text/javascript, */*; q=0.01
+Cache-Control: no-cache
+Cookie: JSESSIONID=EDA3E50D9B38652EF8D5D0E5F6D380ED; Hm_lvt_45341b7d81efc02f807313ce31fcb7ad=1563845361,1564622386,1565157726,1565313865
+Content-Type: application/json
+
+accountType:"" createdTimeEnd:"" createdTimeStart:"" entityCompanyFullName:"" entityInternalCode:"" length:10 order:[] sourceCode:"" sourceType:"补货订单" start:0
+
+<> 2020-03-13T033511.200.json
+
+###
+
+POST http://test.oms.ez4s.com/ezplatform/report/replenishment_amount_query/search
+Accept: */*
+Cache-Control: no-cache
+Cookie: JSESSIONID=EDA3E50D9B38652EF8D5D0E5F6D380ED; Hm_lvt_45341b7d81efc02f807313ce31fcb7ad=1563845361,1564622386,1565157726,1565313865
+Content-Type: application/json
+
+accountType:"" createdTimeEnd:"" createdTimeStart:"" entityCompanyFullName:"" entityInternalCode:"" length:10 order:[] sourceCode:"" sourceType:"补货订单" start:0
+
+<> 2020-03-13T033436.200.json
+
+###
+
+POST http://test.oms.ez4s.com/ezplatform/report/replenishment_amount_query/search
+Accept: */*
+Cache-Control: no-cache
+JSESSIONID: EDA3E50D9B38652EF8D5D0E5F6D380ED
+
+accountType:"" createdTimeEnd:"" createdTimeStart:"" entityCompanyFullName:"" entityInternalCode:"" length:10 order:[] sourceCode:"" sourceType:"补货订单" start:0
+
+<> 2020-03-13T033314.200.json
+
+###
+
+POST http://test.oms.ez4s.com/ezplatform/report/replenishment_amount_query/search
+Accept: */*
+Cache-Control: no-cache
+
+accountType:"" createdTimeEnd:"" createdTimeStart:"" entityCompanyFullName:"" entityInternalCode:"" length:10 order:[] sourceCode:"" sourceType:"补货订单" start:0
+
+<> 2020-03-13T033243.200.json
+
+###
+
+POST http://test.oms.ez4s.com/ezplatform/report/replenishment_amount_query?id=1
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+POST http://test.oms.ez4s.com/ezplatform/report/replenishment_amount_query?id=1
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+POST http://test.oms.ez4s.com/ezplatform/report/oem_product_difference?id=1
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+POST http://localhost:8090/springboot/tb/test/detail?id=1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-03-13T032312.200.json
+
+###
+
+GET http://localhost:8090/springboot/tb/test/detail?id=1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-03-13T032303.200.json
+
+###
+
+GET http://localhost:8090/springboot?id=1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-03-13T032217.200.json
+
+###
+
+GET http://localhost:8090/springboot?id=1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2020-03-13T032153.200.json
+
+###
+

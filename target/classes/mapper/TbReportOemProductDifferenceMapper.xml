@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.company.project.dao.TbReportOemProductDifferenceMapper">
+  <resultMap id="BaseResultMap" type="com.company.project.model.TbReportOemProductDifference">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="relation_entity_code" jdbcType="VARCHAR" property="relationEntityCode" />
+    <result column="relation_entity_sub_code" jdbcType="VARCHAR" property="relationEntitySubCode" />
+    <result column="general_agency_entity_code" jdbcType="VARCHAR" property="generalAgencyEntityCode" />
+    <result column="general_agency_entity_sub_code" jdbcType="VARCHAR" property="generalAgencyEntitySubCode" />
+    <result column="general_agency_entity_internal_code" jdbcType="VARCHAR" property="generalAgencyEntityInternalCode" />
+    <result column="general_agency_entity_company_short_name" jdbcType="VARCHAR" property="generalAgencyEntityCompanyShortName" />
+    <result column="service_business_entity_code" jdbcType="VARCHAR" property="serviceBusinessEntityCode" />
+    <result column="service_business_entity_sub_code" jdbcType="VARCHAR" property="serviceBusinessEntitySubCode" />
+    <result column="service_business_entity_internal_code" jdbcType="VARCHAR" property="serviceBusinessEntityInternalCode" />
+    <result column="service_business_entity_company_short_name" jdbcType="VARCHAR" property="serviceBusinessEntityCompanyShortName" />
+    <result column="manufacturer_brand_name_zh" jdbcType="VARCHAR" property="manufacturerBrandNameZh" />
+    <result column="manufacturer_brand_name_en" jdbcType="VARCHAR" property="manufacturerBrandNameEn" />
+    <result column="material_number" jdbcType="VARCHAR" property="materialNumber" />
+    <result column="product_name" jdbcType="VARCHAR" property="productName" />
+    <result column="quantity" jdbcType="INTEGER" property="quantity" />
+    <result column="service_business_tax_excluded_price" jdbcType="DECIMAL" property="serviceBusinessTaxExcludedPrice" />
+    <result column="service_business_tax_rate" jdbcType="DECIMAL" property="serviceBusinessTaxRate" />
+    <result column="general_agency_tax_excluded_price" jdbcType="DECIMAL" property="generalAgencyTaxExcludedPrice" />
+    <result column="general_agency_tax_rate" jdbcType="DECIMAL" property="generalAgencyTaxRate" />
+    <result column="order_type" jdbcType="VARCHAR" property="orderType" />
+    <result column="order_code" jdbcType="VARCHAR" property="orderCode" />
+    <result column="source_order_code" jdbcType="VARCHAR" property="sourceOrderCode" />
+    <result column="create_date_type" jdbcType="INTEGER" property="createDateType" />
+    <result column="create_date" jdbcType="DATE" property="createDate" />
+    <result column="purchase_type" jdbcType="VARCHAR" property="purchaseType" />
+    <result column="task_order_replenishment_account_rule_type" jdbcType="INTEGER" property="taskOrderReplenishmentAccountRuleType" />
+    <result column="sys_created_time" jdbcType="TIMESTAMP" property="sysCreatedTime" />
+    <result column="sys_created_operator_name" jdbcType="VARCHAR" property="sysCreatedOperatorName" />
+    <result column="sys_updated_time" jdbcType="TIMESTAMP" property="sysUpdatedTime" />
+    <result column="sys_updated_operator_name" jdbcType="VARCHAR" property="sysUpdatedOperatorName" />
+    <result column="sys_del_flg" jdbcType="VARCHAR" property="sysDelFlg" />
+  </resultMap>
+</mapper>

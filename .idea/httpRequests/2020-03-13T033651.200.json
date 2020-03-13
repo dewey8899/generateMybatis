@@ -1,0 +1,19 @@
+{
+  "callback": "",
+  "data": [],
+  "datas": null,
+  "draw": 0,
+  "messages": [
+    "系统异常，请联系供应商。",
+    "JSON parse error: syntax error, expect {, actual error, pos 0, fastjson-version 1.2.61; nested exception is com.alibaba.fastjson.JSONException: syntax error, expect {, actual error, pos 0, fastjson-version 1.2.61"
+  ],
+  "msg": "",
+  "now": "2020-03-13 15:36:51.172",
+  "recordsFiltered": 0,
+  "recordsTotal": 0,
+  "result": false,
+  "rows": [],
+  "status": -9,
+  "total": 0,
+  "valid": false
+}
