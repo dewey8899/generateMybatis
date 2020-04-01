@@ -18,7 +18,7 @@ import static com.company.project.core.ProjectConstant.*;
  */
 public class CodeGenerator {
     //JDBC配置，请修改为你项目的实际配置
-    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/platform";
+    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/shiro";
     private static final String JDBC_USERNAME = "root";
     private static final String JDBC_PASSWORD = "123456";
     private static final String JDBC_DIVER_CLASS_NAME = "com.mysql.cj.jdbc.Driver";
@@ -38,7 +38,8 @@ public class CodeGenerator {
     private static final String DATE = new SimpleDateFormat("yyyy/MM/dd").format(new Date());//@date
 
     public static void main(String[] args) {
-        genCode("tb_test","tb_report_oem_product_difference");
+//        genCode("tb_test","tb_report_oem_product_difference");
+        genCode("tb_permission","tb_user","tb_role","tb_permission_role","tb_user_role");
         //genCodeByCustomModelName("输入表名","输入自定义Model名称");
     }
 
