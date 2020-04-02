@@ -1,8 +1,10 @@
 package com.company.project.shiro;
 
+import com.company.project.dao.TbPermissionMapper;
 import com.company.project.dao.TbPermissionRoleMapper;
 import com.company.project.dao.TbUserMapper;
 import com.company.project.dao.TbUserRoleMapper;
+import com.company.project.model.TbPermission;
 import com.company.project.model.TbPermissionRole;
 import com.company.project.model.TbUser;
 import com.company.project.model.TbUserRole;
@@ -14,6 +16,7 @@ import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.springframework.beans.factory.annotation.Autowired;
+import tk.mybatis.mapper.entity.Condition;
 
 import java.util.Collection;
 import java.util.List;
@@ -36,6 +39,8 @@ public class AuthRealm extends AuthorizingRealm {
 
     @Autowired
     private TbPermissionRoleMapper permissionRoleMapper;
+    @Autowired
+    private TbPermissionMapper permissionMapper;
 
     //授权
     @Override
@@ -46,15 +51,23 @@ public class AuthRealm extends AuthorizingRealm {
         List<TbUserRole> userRoleList = userRoleMapper.select(userRole);
         if (userRoleList.size()==0) return null;
         Set<Integer> roleIdSet = userRoleList.stream().map(TbUserRole::getRid).collect(Collectors.toSet());
-        String condition = roleIdSet.toString();
-        List<TbPermissionRole> tbPermissionRoles = permissionRoleMapper.selectByIds(condition);
-        List<String> permissionList = Lists.newArrayList();
-        for (TbUserRole tbUserRole : userRoleList) {
-            tbUserRole.getRid();
+        Condition condition = new Condition(TbPermissionRole.class);
+        condition.createCriteria().andIn("id",roleIdSet);
+        List<TbPermissionRole> tbPermissionRoles = permissionRoleMapper.selectByExample(condition);
+        if (tbPermissionRoles.size() ==0 ){
+            return null;
         }
+        Set<Integer> pidSet = tbPermissionRoles.stream().map(TbPermissionRole::getPid).collect(Collectors.toSet());
+        Condition permissionExample = new Condition(TbPermission.class);
+        permissionExample.createCriteria().andIn("pid", pidSet);
+        List<TbPermission> tbPermissions = permissionMapper.selectByExample(permissionExample);
+        if (tbPermissions.size() ==0 ){
+            return null;
+        }
+        Set<String> permissionList = tbPermissions.stream().map(TbPermission::getPname).collect(Collectors.toSet());
         SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
         info.addStringPermissions(permissionList);
-        return null;
+        return info;
     }
 
     //认证登录
