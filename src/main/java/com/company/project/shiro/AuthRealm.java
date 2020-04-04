@@ -1,14 +1,7 @@
 package com.company.project.shiro;
 
-import com.company.project.dao.TbPermissionMapper;
-import com.company.project.dao.TbPermissionRoleMapper;
-import com.company.project.dao.TbUserMapper;
-import com.company.project.dao.TbUserRoleMapper;
-import com.company.project.model.TbPermission;
-import com.company.project.model.TbPermissionRole;
-import com.company.project.model.TbUser;
-import com.company.project.model.TbUserRole;
-import com.google.common.collect.Lists;
+import com.company.project.dao.*;
+import com.company.project.model.*;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
@@ -18,9 +11,7 @@ import org.apache.shiro.subject.PrincipalCollection;
 import org.springframework.beans.factory.annotation.Autowired;
 import tk.mybatis.mapper.entity.Condition;
 
-import java.util.Collection;
 import java.util.List;
-import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -38,6 +29,9 @@ public class AuthRealm extends AuthorizingRealm {
     private TbUserRoleMapper userRoleMapper;
 
     @Autowired
+    private TbRoleMapper roleMapper;
+
+    @Autowired
     private TbPermissionRoleMapper permissionRoleMapper;
     @Autowired
     private TbPermissionMapper permissionMapper;
@@ -51,8 +45,12 @@ public class AuthRealm extends AuthorizingRealm {
         List<TbUserRole> userRoleList = userRoleMapper.select(userRole);
         if (userRoleList.size()==0) return null;
         Set<Integer> roleIdSet = userRoleList.stream().map(TbUserRole::getRid).collect(Collectors.toSet());
+        Condition conditionRole = new Condition(TbRole.class);
+        conditionRole.createCriteria().andIn("rid",roleIdSet);
+        List<TbRole> tbRoles = roleMapper.selectByExample(conditionRole);
+        Set<String> roleNameList = tbRoles.stream().map(TbRole::getRname).collect(Collectors.toSet());
         Condition condition = new Condition(TbPermissionRole.class);
-        condition.createCriteria().andIn("id",roleIdSet);
+        condition.createCriteria().andIn("rid",roleIdSet);
         List<TbPermissionRole> tbPermissionRoles = permissionRoleMapper.selectByExample(condition);
         if (tbPermissionRoles.size() ==0 ){
             return null;
@@ -67,6 +65,7 @@ public class AuthRealm extends AuthorizingRealm {
         Set<String> permissionList = tbPermissions.stream().map(TbPermission::getPname).collect(Collectors.toSet());
         SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
         info.addStringPermissions(permissionList);
+        info.addRoles(roleNameList);
         return info;
     }
 

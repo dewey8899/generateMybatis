@@ -66,7 +66,7 @@ public abstract class AbstractService<T> implements Service<T> {
     }
 
     public List<T> findByCondition(Condition condition) {
-        return mapper.selectByCondition(condition);
+        return mapper.selectByExample(condition);
     }
 
     public List<T> findAll() {
