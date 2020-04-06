@@ -39,7 +39,8 @@ public class AuthRealm extends AuthorizingRealm {
     //授权
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principalCollection) {
-        TbUser user = (TbUser)principalCollection.fromRealm(this.getClass().getName()).iterator().next();
+//        TbUser user = (TbUser)principalCollection.fromRealm(this.getClass().getName()).iterator().next();//方法一获取用户
+        TbUser user = (TbUser)principalCollection.getPrimaryPrincipal();//方法二获取用户
         TbUserRole userRole = new TbUserRole();
         userRole.setUid(user.getUid());
         List<TbUserRole> userRoleList = userRoleMapper.select(userRole);
@@ -64,7 +65,9 @@ public class AuthRealm extends AuthorizingRealm {
         }
         Set<String> permissionList = tbPermissions.stream().map(TbPermission::getPname).collect(Collectors.toSet());
         SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
+        //赋予权限
         info.addStringPermissions(permissionList);
+        //赋予角色
         info.addRoles(roleNameList);
         return info;
     }
@@ -74,12 +77,34 @@ public class AuthRealm extends AuthorizingRealm {
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken authenticationToken) throws AuthenticationException {
         UsernamePasswordToken usernamePasswordToken = (UsernamePasswordToken)authenticationToken;
         String username = usernamePasswordToken.getUsername();
+        String password = String.valueOf(usernamePasswordToken.getPassword());
         TbUser user = new TbUser();
         user.setUsername(username);
         List<TbUser> select = userMapper.select(user);
+        //返回null -> shiro就会知道这是用户不存在的异常
+        if(CollectionUtils.isEmpty(select)){
+            return null;
+        }
+        // 验证密码 【注：这里不采用shiro自身密码验证 ， 采用的话会导致用户登录密码错误时，已登录的账号也会自动下线！  如果采用，移除下面的清除缓存到登录处 处理】
+        if (!password.equals( user.getPasword())){
+            throw new IncorrectCredentialsException("用户名或者密码错误");
+        }
+        // 判断账号是否被冻结(如果数据库设置冻结属性)
+//        if (user.getFlag()==null|| "0".equals(user.getFlag())){
+//            throw new LockedAccountException();
+//        }
+        /**
+         * 进行验证 -> 注：shiro会自动验证密码
+         * 参数1：principal -> 放对象就可以在页面任意地方拿到该对象里面的值
+         * 参数2：hashedCredentials -> 密码
+         * 参数3：credentialsSalt -> 设置盐值
+         * 参数4：realmName -> 自定义的Realm
+         */
+//        SimpleAuthenticationInfo authenticationInfo = new SimpleAuthenticationInfo(user, user.getPasword(), ByteSource.Util.bytes(user.getSalt()), getName());
         if (CollectionUtils.isNotEmpty(select)){
             user = select.get(0);
         }
-        return new SimpleAuthenticationInfo(user,user.getPasword(),this.getClass().getName());
+        SimpleAuthenticationInfo info = new SimpleAuthenticationInfo(user, user.getPasword(), this.getClass().getName());
+        return info;
     }
 }

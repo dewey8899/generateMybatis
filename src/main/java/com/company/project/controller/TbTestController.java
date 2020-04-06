@@ -1,17 +1,25 @@
 package com.company.project.controller;
+
 import com.company.project.core.Result;
 import com.company.project.core.ResultGenerator;
+import com.company.project.dao.TbUserMapper;
 import com.company.project.model.TbTest;
+import com.company.project.model.TbUser;
 import com.company.project.service.TbTestService;
+import com.company.project.service.TbUserService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Async;
+import org.springframework.util.StopWatch;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Future;
 
 /**
 * Created by dewey on 2020/03/13
@@ -21,6 +29,8 @@ import java.util.List;
 public class TbTestController {
     @Autowired
     private TbTestService tbTestService;
+    @Autowired
+    private TbUserService userService;
 
     @PostMapping("/add")
     public Result add(TbTest tbTest) {
@@ -32,6 +42,21 @@ public class TbTestController {
     public Result delete(@RequestParam Long id) {
         tbTestService.deleteById(id);
         return ResultGenerator.genSuccessResult();
+    }
+
+    @PostMapping("/dewey")
+    public Result dewey(@RequestParam Integer id) throws InterruptedException, ExecutionException {
+        StopWatch stopWatch = new StopWatch();
+        stopWatch.start("userList");
+        Future<List<TbUser>> listFuture = userService.userList(id);
+        stopWatch.stop();
+        System.out.println(stopWatch.prettyPrint());
+        while (true){
+            if (listFuture.isDone()){
+                return new Result<>().setData(listFuture.get());
+            }
+        }
+
     }
 
     @PostMapping("/update")
