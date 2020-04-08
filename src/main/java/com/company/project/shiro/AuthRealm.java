@@ -85,8 +85,9 @@ public class AuthRealm extends AuthorizingRealm {
         if(CollectionUtils.isEmpty(select)){
             return null;
         }
+        user = select.get(0);
         // 验证密码 【注：这里不采用shiro自身密码验证 ， 采用的话会导致用户登录密码错误时，已登录的账号也会自动下线！  如果采用，移除下面的清除缓存到登录处 处理】
-        if (!password.equals( user.getPasword())){
+        if (!password.equals(user.getPasword())){
             throw new IncorrectCredentialsException("用户名或者密码错误");
         }
         // 判断账号是否被冻结(如果数据库设置冻结属性)
@@ -101,9 +102,6 @@ public class AuthRealm extends AuthorizingRealm {
          * 参数4：realmName -> 自定义的Realm
          */
 //        SimpleAuthenticationInfo authenticationInfo = new SimpleAuthenticationInfo(user, user.getPasword(), ByteSource.Util.bytes(user.getSalt()), getName());
-        if (CollectionUtils.isNotEmpty(select)){
-            user = select.get(0);
-        }
         SimpleAuthenticationInfo info = new SimpleAuthenticationInfo(user, user.getPasword(), this.getClass().getName());
         return info;
     }
