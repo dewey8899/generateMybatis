@@ -1,3 +1,49 @@
+GET http://editest.byd.com.cn:28280/invoke/BYD_ICLOUD_ORDER/getToken?userNo=S140420&password=B82E819A
+
+{"length":10,   "sourceType":"补货订单",   "start":"0",   "draw": 2 }
+
+###
+
+GET http://editest.byd.com.cn:28280/invoke/BYD_ICLOUD_ORDER/getToken?userNo=S140420&password=B82E819A
+
+{"length":10,   "sourceType":"补货订单",   "start":"0",   "draw": 2 }
+
+###
+
+GET http://editest.byd.com.cn:28280/invoke/BYD_ICLOUD_ORDER/getToken?userNo=S140420&password=B82E819A
+
+{"length":10,   "sourceType":"补货订单",   "start":"0",   "draw": 2 }
+
+###
+
+GET http://editest.byd.com.cn:28280/invoke/BYD_ICLOUD_ORDER/getToken?userNo=S22276&password=123456
+
+###
+
+GET http://editest.byd.com.cn:8280/invoke/BYD_ICLOUD_ORDER/getToken?userNo=S22276&password=123456
+
+{"length":10,   "sourceType":"补货订单",   "start":"0",   "draw": 2 }
+
+###
+
+GET http://editest.byd.com.cn:8280/invoke/BYD_ICLOUD_ORDER/getToken?userNo=S140420&password=B82E819A
+
+{"length":10,   "sourceType":"补货订单",   "start":"0",   "draw": 2 }
+
+###
+
+GET http://editest.byd.com.cn:28280/invoke/BYD_ICLOUD_ORDER/getToken?userNo=S140420&password=B82E819A
+
+{"length":10,   "sourceType":"补货订单",   "start":"0",   "draw": 2 }
+
+###
+
+GET http://editest.byd.com.cn:28280/invoke/BYD_ICLOUD_ORDER/getToken?userNo=S140420&password=B82E819A
+
+{"length":10,   "sourceType":"补货订单",   "start":"0",   "draw": 2 }
+
+###
+
 POST http://test.oms.ez4s.com/ezplatform/report/replenishment_amount_query/search
 Accept: application/json, text/javascript, */*; q=0.01
 Cache-Control: no-cache
