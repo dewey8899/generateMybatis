@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.company.project.dao.TbProductBaseMapper">
+  <resultMap id="BaseResultMap" type="com.company.project.model.TbProductBase">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="entity_code" jdbcType="VARCHAR" property="entityCode" />
+    <result column="entity_sub_code" jdbcType="VARCHAR" property="entitySubCode" />
+    <result column="brand_code" jdbcType="VARCHAR" property="brandCode" />
+    <result column="product_code" jdbcType="VARCHAR" property="productCode" />
+    <result column="industry" jdbcType="VARCHAR" property="industry" />
+    <result column="large_category_code" jdbcType="VARCHAR" property="largeCategoryCode" />
+    <result column="medium_category_code" jdbcType="VARCHAR" property="mediumCategoryCode" />
+    <result column="small_category_code" jdbcType="VARCHAR" property="smallCategoryCode" />
+    <result column="material_number" jdbcType="VARCHAR" property="materialNumber" />
+    <result column="product_name_zh" jdbcType="VARCHAR" property="productNameZh" />
+    <result column="product_name_en" jdbcType="VARCHAR" property="productNameEn" />
+    <result column="product_attribute" jdbcType="VARCHAR" property="productAttribute" />
+    <result column="product_ean_code" jdbcType="VARCHAR" property="productEanCode" />
+    <result column="box_ean_code" jdbcType="VARCHAR" property="boxEanCode" />
+    <result column="box_entry_quantity" jdbcType="INTEGER" property="boxEntryQuantity" />
+    <result column="quality_guarantee_period" jdbcType="INTEGER" property="qualityGuaranteePeriod" />
+    <result column="net_weight" jdbcType="DECIMAL" property="netWeight" />
+    <result column="gross_weight" jdbcType="DECIMAL" property="grossWeight" />
+    <result column="internal_quantity" jdbcType="INTEGER" property="internalQuantity" />
+    <result column="volume" jdbcType="DECIMAL" property="volume" />
+    <result column="density" jdbcType="DECIMAL" property="density" />
+    <result column="production_status" jdbcType="VARCHAR" property="productionStatus" />
+    <result column="specifications" jdbcType="VARCHAR" property="specifications" />
+    <result column="unit" jdbcType="VARCHAR" property="unit" />
+    <result column="shelved_status" jdbcType="VARCHAR" property="shelvedStatus" />
+    <result column="shelved_time" jdbcType="TIMESTAMP" property="shelvedTime" />
+    <result column="shelved_operator_name" jdbcType="VARCHAR" property="shelvedOperatorName" />
+    <result column="unshelved_time" jdbcType="TIMESTAMP" property="unshelvedTime" />
+    <result column="unshelved_operator_name" jdbcType="VARCHAR" property="unshelvedOperatorName" />
+    <result column="created_operator_name" jdbcType="VARCHAR" property="createdOperatorName" />
+    <result column="created_time" jdbcType="TIMESTAMP" property="createdTime" />
+    <result column="sys_created_time" jdbcType="TIMESTAMP" property="sysCreatedTime" />
+    <result column="sys_created_operator_name" jdbcType="VARCHAR" property="sysCreatedOperatorName" />
+    <result column="sys_updated_time" jdbcType="TIMESTAMP" property="sysUpdatedTime" />
+    <result column="sys_updated_operator_name" jdbcType="VARCHAR" property="sysUpdatedOperatorName" />
+    <result column="sys_del_flg" jdbcType="VARCHAR" property="sysDelFlg" />
+  </resultMap>
+</mapper>
