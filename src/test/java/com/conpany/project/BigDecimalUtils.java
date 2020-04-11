@@ -11,16 +11,6 @@ package com.conpany.project;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-/**
- * ClassName:BigDecimalUtils <br/>
- * Function: TODO ADD FUNCTION. <br/>
- * Date: 2016年8月24日 上午11:29:57 <br/>
- *
- * @author michaelgu
- * @version
- * @since JDK 1.6
- * @see
- */
 public class BigDecimalUtils {
 
 
