@@ -6,24 +6,27 @@ import com.company.project.service.TbUserRoleService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 /**
 * Created by dewey on 2020/04/01
 */
-@RestController
+
 @RequestMapping("/tb/user/role")
+@RestController
 public class TbUserRoleController {
     @Autowired
     private TbUserRoleService tbUserRoleService;
 
-    @PostMapping("/add")
-    public Result add(TbUserRole tbUserRole) {
+    /**
+     *添加用户
+     * @param tbUserRole
+     * @return
+     */
+    @PostMapping(path = "/add")
+    public Result add(@RequestBody TbUserRole tbUserRole) {
         tbUserRoleService.save(tbUserRole);
         return ResultGenerator.genSuccessResult();
     }

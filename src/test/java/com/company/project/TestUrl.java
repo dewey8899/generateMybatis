@@ -1,8 +1,10 @@
-package com.conpany.project;
+package com.company.project;
 
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by deweydu
@@ -78,6 +80,19 @@ public class TestUrl {
         }
     }
     public static void main(String[] args) {
-        doPostOrGet("http://editest.byd.com.cn:28280/invoke/BYD_ICLOUD_ORDER/getToken?ueserNo=S140420&password=B82E819A","");
+//        doPostOrGet("http://editest.byd.com.cn:28280/invoke/BYD_ICLOUD_ORDER/getToken?ueserNo=S140420&password=B82E819A","");
+        String address = "jimmyyang@enmore.com,avazhang@enmore.com,avazhang@enmore.com,millychen@enmore.com,claredu@enmore.com";
+//        array = address.split(",");
+//        array[0] = address;
+        List<String> list = new ArrayList<>();
+        list.add("jimmyyang@enmore.com");
+        list.add("avazhang@enmore.com");
+        list.clear();
+        System.out.println(list.size());
+        list.add("avazhang@enmore.com");
+        System.out.println(list.size());
+        String[] array = new String[list.size()];
+        array = list.toArray(array);
+        System.out.println(array.toString());
     }
 }

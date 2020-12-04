@@ -1,0 +1,1 @@
+java -jar generateMybatis-1.0.jar

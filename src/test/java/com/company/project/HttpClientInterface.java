@@ -1,4 +1,4 @@
-package com.conpany.project;
+package com.company.project;
 
 import org.apache.commons.httpclient.*;
 import org.apache.commons.httpclient.methods.GetMethod;

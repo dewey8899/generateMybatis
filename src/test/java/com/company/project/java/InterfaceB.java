@@ -1,4 +1,4 @@
-package com.conpany.project.java;
+package com.company.project.java;
 
 /**
  * Created by deweydu

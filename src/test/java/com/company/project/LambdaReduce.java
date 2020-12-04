@@ -1,4 +1,4 @@
-package com.conpany.project;
+package com.company.project;
 
 import lombok.Data;
 import org.assertj.core.util.Lists;
@@ -32,6 +32,8 @@ public class LambdaReduce {
             System.out.println(v1);
             return v2;
         });
+        //28-34行 等于36行
+        System.out.println(userList.stream().map(User::getMoney).reduce(BigDecimal.ZERO,BigDecimal::add));
     }
 }
 @Data

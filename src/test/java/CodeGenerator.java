@@ -38,8 +38,8 @@ public class CodeGenerator {
     private static final String DATE = new SimpleDateFormat("yyyy/MM/dd").format(new Date());//@date
 
     public static void main(String[] args) {
-//        genCode("tb_test","tb_report_oem_product_difference");
-        genCode("tb_delivery_base","tb_input_warehouse_data","tb_product_base");
+        genCode("fct_product_transfer_record_detail");
+//        genCode("tb_delivery_base","tb_input_warehouse_data","tb_product_base");
         //genCodeByCustomModelName("输入表名","输入自定义Model名称");
     }
 

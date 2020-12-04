@@ -1,0 +1,111 @@
+697  DEBUG [2020-11-11 13:56:23]  Couldn't find template in cache for "api-controller.html.ftl"("zh_CN", UTF-8, parsed); will try to load it.
+698  DEBUG [2020-11-11 13:56:23]  TemplateLoader.findTemplateSource("api-controller.html_zh_CN.ftl"): Not found
+698  DEBUG [2020-11-11 13:56:23]  TemplateLoader.findTemplateSource("api-controller.html_zh.ftl"): Not found
+698  DEBUG [2020-11-11 13:56:23]  TemplateLoader.findTemplateSource("api-controller.html.ftl"): Found
+699  DEBUG [2020-11-11 13:56:23]  Loading template for "api-controller.html.ftl"("zh_CN", UTF-8, parsed) from "jar:file:/C:/Users/deweydu/.m2/repository/io/github/yedaxia/japidocs/1.3/japidocs-1.3.jar!/api-controller.html.ftl"
+710  ERROR [2020-11-11 13:56:23]  Error executing FreeMarker template
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> reqNode.description  [in template "api-controller.html.ftl" at line 53, column 31]
+
+----
+Tip: It's the step after the last dot that caused this error, not those before it.
+----
+Tip: If the failing expression is known to be legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${reqNode.description}  [in template "api-controller.html.ftl" at line 53, column 29]
+----
+
+Java stack trace (for programmers):
+----
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:131)
+	at freemarker.core.EvalUtil.coerceModelToString(EvalUtil.java:355)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:82)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:41)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.MixedContent.accept(MixedContent.java:54)
+	at freemarker.core.Environment.visitByHiddingParent(Environment.java:345)
+	at freemarker.core.IteratorBlock$IterationContext.executeNestedBlockInner(IteratorBlock.java:268)
+	at freemarker.core.IteratorBlock$IterationContext.executeNestedBlock(IteratorBlock.java:220)
+	at freemarker.core.IteratorBlock$IterationContext.accept(IteratorBlock.java:194)
+	at freemarker.core.Environment.visitIteratorBlock(Environment.java:572)
+	at freemarker.core.IteratorBlock.acceptWithResult(IteratorBlock.java:78)
+	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:64)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.MixedContent.accept(MixedContent.java:54)
+	at freemarker.core.Environment.visitByHiddingParent(Environment.java:345)
+	at freemarker.core.IteratorBlock$IterationContext.executeNestedBlockInner(IteratorBlock.java:268)
+	at freemarker.core.IteratorBlock$IterationContext.executeNestedBlock(IteratorBlock.java:220)
+	at freemarker.core.IteratorBlock$IterationContext.accept(IteratorBlock.java:194)
+	at freemarker.core.Environment.visitIteratorBlock(Environment.java:572)
+	at freemarker.core.IteratorBlock.acceptWithResult(IteratorBlock.java:78)
+	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:64)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.MixedContent.accept(MixedContent.java:54)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.Environment.process(Environment.java:302)
+	at freemarker.template.Template.process(Template.java:325)
+	at io.github.yedaxia.apidocs.doc.HtmlControllerDocBuilder.buildDoc(HtmlControllerDocBuilder.java:49)
+	at io.github.yedaxia.apidocs.doc.AbsDocGenerator.generateControllersDocs(AbsDocGenerator.java:65)
+	at io.github.yedaxia.apidocs.doc.AbsDocGenerator.generateDocs(AbsDocGenerator.java:34)
+	at io.github.yedaxia.apidocs.Docs.buildHtmlDocs(Docs.java:31)
+	at com.company.project.apiDocs.ApiDocsConfig.main(ApiDocsConfig.java:19)
+719  DEBUG [2020-11-11 13:56:23]  Couldn't find template in cache for "api-index.html.ftl"("zh_CN", UTF-8, parsed); will try to load it.
+720  DEBUG [2020-11-11 13:56:23]  TemplateLoader.findTemplateSource("api-index.html_zh_CN.ftl"): Not found
+720  DEBUG [2020-11-11 13:56:23]  TemplateLoader.findTemplateSource("api-index.html_zh.ftl"): Not found
+720  DEBUG [2020-11-11 13:56:23]  TemplateLoader.findTemplateSource("api-index.html.ftl"): Found
+721  DEBUG [2020-11-11 13:56:23]  Loading template for "api-index.html.ftl"("zh_CN", UTF-8, parsed) from "jar:file:/C:/Users/deweydu/.m2/repository/io/github/yedaxia/japidocs/1.3/japidocs-1.3.jar!/api-index.html.ftl"
+732  ERROR [2020-11-11 13:56:23]  Error executing FreeMarker template
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> reqNode.description  [in template "api-index.html.ftl" at line 53, column 35]
+
+----
+Tip: It's the step after the last dot that caused this error, not those before it.
+----
+Tip: If the failing expression is known to be legally refer to something that's sometimes null or missing, either specify a default value like myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthesis: (myOptionalVar.foo)!myDefault, (myOptionalVar.foo)??
+----
+
+----
+FTL stack trace ("~" means nesting-related):
+	- Failed at: ${reqNode.description}  [in template "api-index.html.ftl" at line 53, column 33]
+----
+
+Java stack trace (for programmers):
+----
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:131)
+	at freemarker.core.EvalUtil.coerceModelToString(EvalUtil.java:355)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:82)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:41)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.MixedContent.accept(MixedContent.java:54)
+	at freemarker.core.Environment.visitByHiddingParent(Environment.java:345)
+	at freemarker.core.IteratorBlock$IterationContext.executeNestedBlockInner(IteratorBlock.java:268)
+	at freemarker.core.IteratorBlock$IterationContext.executeNestedBlock(IteratorBlock.java:220)
+	at freemarker.core.IteratorBlock$IterationContext.accept(IteratorBlock.java:194)
+	at freemarker.core.Environment.visitIteratorBlock(Environment.java:572)
+	at freemarker.core.IteratorBlock.acceptWithResult(IteratorBlock.java:78)
+	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:64)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.MixedContent.accept(MixedContent.java:54)
+	at freemarker.core.Environment.visitByHiddingParent(Environment.java:345)
+	at freemarker.core.IteratorBlock$IterationContext.executeNestedBlockInner(IteratorBlock.java:268)
+	at freemarker.core.IteratorBlock$IterationContext.executeNestedBlock(IteratorBlock.java:220)
+	at freemarker.core.IteratorBlock$IterationContext.accept(IteratorBlock.java:194)
+	at freemarker.core.Environment.visitIteratorBlock(Environment.java:572)
+	at freemarker.core.IteratorBlock.acceptWithResult(IteratorBlock.java:78)
+	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:64)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.MixedContent.accept(MixedContent.java:54)
+	at freemarker.core.Environment.visit(Environment.java:324)
+	at freemarker.core.Environment.process(Environment.java:302)
+	at freemarker.template.Template.process(Template.java:325)
+	at io.github.yedaxia.apidocs.doc.HtmlDocGenerator.generateIndex(HtmlDocGenerator.java:45)
+	at io.github.yedaxia.apidocs.doc.AbsDocGenerator.generateDocs(AbsDocGenerator.java:35)
+	at io.github.yedaxia.apidocs.Docs.buildHtmlDocs(Docs.java:31)
+	at com.company.project.apiDocs.ApiDocsConfig.main(ApiDocsConfig.java:19)

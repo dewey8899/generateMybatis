@@ -1,7 +1,6 @@
-package com.conpany.project;
+package com.company.project;
 
 
-import com.company.project.Application;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -19,7 +18,7 @@ import org.springframework.transaction.annotation.Transactional;
 public abstract class Tester {
     @Test
     public void test1(){
-
+        System.out.println("hello dewey");
     }
 }
 

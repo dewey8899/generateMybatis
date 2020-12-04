@@ -6,7 +6,7 @@
  * Copyright (c) 2016, 上海易贸供应链管理有限公司版权所有.
  */
 
-package com.conpany.project;
+package com.company.project;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
