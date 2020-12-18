@@ -1,8 +1,10 @@
 package com.company.project.test_controller;
 
-import com.company.project.dao.TbPurchaseMasterRoleActionMapper;
-import com.company.project.model.TbPurchaseMasterRoleAction;
+//import com.company.project.dao.TbPurchaseMasterRoleActionMapper;
+//import com.company.project.model.TbPurchaseMasterRoleAction;
+
 import com.company.project.model.TbUser;
+import com.company.project.redis.ReplicationExampleService;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
@@ -14,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -26,11 +27,26 @@ import java.util.List;
 public class TestController {
     @Value("")
     private List<String> list;
+//    @Autowired
+//    private TbPurchaseMasterRoleActionMapper roleActionMapper;
+
     @Autowired
-    private TbPurchaseMasterRoleActionMapper roleActionMapper;
+    private ReplicationExampleService replicationExampleService;
+
     @RequestMapping("/login")
-    public String login(){
-        return "login";
+    @ResponseBody
+    public String login() throws InterruptedException {
+        replicationExampleService.setByCache("Lucas","Lucas");
+        // 每个一秒钟，操作一下redis，看看最终效果
+        int i = 0;
+        while (true) {
+            i++;
+            replicationExampleService.setByCache("test-value", String.valueOf(i));
+            System.out.println("修改test-value值为: " + i);
+            Thread.sleep(1000L);
+        }
+//        String dewey = replicationExampleService.getByCache("Lucas");
+//        return "";
     }
 
 
@@ -52,8 +68,11 @@ public class TestController {
     }
 
     @RequestMapping("/index")
+    @ResponseBody
     public String index(){
-        return "index";
+        String dewey = replicationExampleService.getByCache("dewey");
+        return dewey;
+//        return "index";
     }
 
     @RequestMapping("/unauthorized")

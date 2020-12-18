@@ -14,6 +14,8 @@
         <shiro-redis.version>3.1.0</shiro-redis.version>
         <es.version>7.3.2</es.version>
         <jackjson.version>2.10.2</jackjson.version>
+        <sdr.version>2.1.5.RELEASE</sdr.version> <!-- spring data redis -->
+        <lettuce.version>5.1.4.RELEASE</lettuce.version> <!-- redis client -->
     </properties>
 
     <!-- Inherit defaults from Spring Boot -->
@@ -223,10 +225,33 @@
             <artifactId>jackson-databind</artifactId>
             <version>${jackjson.version}</version>
         </dependency>
-<!--        rabbitmq-->
+<!--        redistemplate-->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-amqp</artifactId>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-redis</artifactId>
+            <version>${sdr.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.lettuce</groupId>
+            <artifactId>lettuce-core</artifactId>
+            <version>${lettuce.version}</version>
+        </dependency>
+        <!--        rabbitmq-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-amqp</artifactId>-->
+<!--        </dependency>-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
         </dependency>
     </dependencies>
 
