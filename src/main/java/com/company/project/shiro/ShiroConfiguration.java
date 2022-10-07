@@ -21,7 +21,7 @@ import java.util.Map;
  * @author dewey.du
  * @create 2020/4/3 0003
  */
-@Configuration
+//@Configuration
 public class ShiroConfiguration {
 
     @Bean("credentialMatcher")
